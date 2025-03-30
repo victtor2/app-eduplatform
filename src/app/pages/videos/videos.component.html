@@ -1,0 +1,13 @@
+<div class="container-fluid text-center">
+    <h1>{{ course!.title }}</h1>
+    <div class="row">
+        <div class="col-md-5">
+            <img [src]="course!.image" [alt]="course!.title" class="img-fluid"/>
+        </div>
+        <div class="col-md-5">
+            <h3>Precio: $ {{course!.price.toFixed(2)}}</h3>
+            <p>{{course!.description}}</p>
+            <a routerLink="/products" class="btn btn-primary">Regresar a los todos los productos</a>
+        </div>
+    </div>
+</div>

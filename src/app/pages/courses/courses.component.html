@@ -1,0 +1,27 @@
+
+<div class="container-fluid text-center">
+    <h1>Courses</h1>
+    <div class="d-flex justify-content-center align-content-center flex-wrap gap-4">
+        @for(course of courses; track $index){
+            <div class="card" style="width: 18rem;" (click)="goToCourse(course.id)">
+              <img
+              [src]="course.image"
+              class="card-imag-top p-3"
+              style="height: 200px; width: fit-content; max-width: 100%; margin-inline: auto;"
+              [alt]="course.title">
+                <div class="card-body">
+                  <h5 class="card-title">{{course.title}}</h5>
+                  <h6 class="card-subtitle mb-2">$ {{course.price}}</h6>
+                  <h6 class="card-subtitle mb-2">{{course.description}}</h6>
+                  <iframe
+                        [src]="course.videoUrl"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                  <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+              </div>
+        }
+    </div>
+    
+</div>
