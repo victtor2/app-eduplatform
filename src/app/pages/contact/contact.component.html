@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-center text-info fw-bold mb-4">¡Contáctanos!</h2>
+        <p class="text-center text-secondary">Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+  
+        <!-- Formulario de contacto -->
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Enviar mensaje</button>
+        </form>
+      </div>
+  
+      <div class="col-md-6">
+        <h3 class="text-center text-primary fw-bold mb-4">Nuestra Ubicación</h3>
+        <p class="text-center text-secondary">Puedes encontrarnos en nuestra oficina. Visítanos durante el horario de atención.</p>
+  
+        <!-- Mapa de ubicación -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe 
+          class="embed-responsive-item" 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFKXqVh36TVdGyr0QGscHb_I4KCFTL601Gpg&s" 
+          allowfullscreen="" 
+          loading="lazy"></iframe>
+        </div>
+        <div class="text-right">
+            <button type="button" class="btn btn-secondary" routerLink="/home">Pagina Principal</button>
+        </div>
+      </div>
+    </div>
+  </div>
