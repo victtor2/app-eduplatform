@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Course } from '../../types/courses';
 import { Router } from '@angular/router';
 import { CourseService } from '../../services/course.service';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
     selector: 'app-courses',
@@ -13,7 +14,7 @@ export class CoursesComponent {
 
   courses: Course[] = [];
 
-  constructor(private courseService: CourseService, private router: Router){}
+  constructor(private courseService: CourseService, private router: Router, private cartService: CartService){}
 
   ngOnInit(): void {
     // Obtenemos los cursos en tiempo real desde Firebase
@@ -26,6 +27,11 @@ export class CoursesComponent {
   goToCourse(id: number) {
     //console.log('Course id:', id);
     this.router.navigate(['/courses', id]);
+  }
+
+  addToCart(event: Event, course: Course){
+    event.stopPropagation();
+    this.cartService.addCourse(course);
   }
   
 

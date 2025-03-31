@@ -26,10 +26,10 @@ export class CourseService {
     return addDoc(this.coursesCollection, course);
   }
 
-  updateCourse(course: Course){
+  /*updateCourse(course: Course){
     const courseRef = doc(this.firestore, "sourses", sourse.id.toString());
     return setDoc(courseRef, course, {merge: true});
-  }
+  }*/
 
   deleteCourse(id: string) {
     return deleteDoc(doc(this.firestore, `courses/${id}`));

@@ -24,7 +24,7 @@ export class LoginComponent {
   login(){
     if(this.loginForm.invalid) return;
     if(this.showRegister){
-        this.authSeervice.registerWithEmail(this.email?.value, this.password?.value)
+        this.authService.registerWithEmail(this.email?.value, this.password?.value)
         .then(() => console.log("Registro exitoso"))
         .catch(err => console.log(err));   
     }
