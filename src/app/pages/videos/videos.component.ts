@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Course } from '../../types/courses';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { CourseService } from '../../services/course.service';
+import { CourseService } from '../../services/courses/course.service';
 
 @Component({
     selector: 'app-videos',

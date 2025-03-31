@@ -1,0 +1,7 @@
+
+.carousel-item img {
+    height: 400px; /* Ajusta la altura según lo que necesites */
+    width: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    margin: auto; /* Centra la imagen si es más pequeña */
+}
