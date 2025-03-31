@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 import { CourseService } from '../../services/course.service';
 
 @Component({
-  selector: 'app-courses',
-  standalone: true,
-  imports: [],
-  templateUrl: './courses.component.html',
-  styleUrl: './courses.component.css'
+    selector: 'app-courses',
+    imports: [],
+    templateUrl: './courses.component.html',
+    styleUrl: './courses.component.css'
 })
 export class CoursesComponent {
 

@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+    selector: 'app-login',
+    imports: [ReactiveFormsModule],
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.css'
 })
 export class LoginComponent {
 
@@ -24,6 +23,11 @@ export class LoginComponent {
 
   login(){
     if(this.loginForm.invalid) return;
+    if(this.showRegister){
+        this.authSeervice.registerWithEmail(this.email?.value, this.password?.value)
+        .then(() => console.log("Registro exitoso"))
+        .catch(err => console.log(err));   
+    }
     this.authService.loginWithEmail(this.email?.value, this.password?.value)
       .then(() => console.log("Login exitoso"))
       .catch(err => console.log(err));
@@ -34,7 +38,11 @@ export class LoginComponent {
     this.showRegister = !this.showRegister;
   }
 
-  get email() { return this.loginForm.get("email")};
+  get email() { 
+    return this.loginForm.get("email") 
+  };
 
-  get password() {return this.loginForm.get("password")};
+  get password() {
+    return this.loginForm.get("password")
+  };
 }

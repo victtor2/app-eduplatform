@@ -18,12 +18,17 @@ export class CourseService {
   }
 
   getCourse(id: number): Observable<Course> {
-    const productRef = doc(this.firestore, "courses", id.toString());
-    return docData(productRef) as Observable<Course>;
+    const courseRef = doc(this.firestore, "courses", id.toString());
+    return docData(courseRef) as Observable<Course>;
   }
 
   addCourse(course: Course) {
     return addDoc(this.coursesCollection, course);
+  }
+
+  updateCourse(course: Course){
+    const courseRef = doc(this.firestore, "sourses", sourse.id.toString());
+    return setDoc(courseRef, course, {merge: true});
   }
 
   deleteCourse(id: string) {

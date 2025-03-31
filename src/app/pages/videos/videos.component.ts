@@ -4,11 +4,10 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CourseService } from '../../services/course.service';
 
 @Component({
-  selector: 'app-videos',
-  standalone: true,
-  imports: [RouterLink],
-  templateUrl: './videos.component.html',
-  styleUrl: './videos.component.css'
+    selector: 'app-videos',
+    imports: [RouterLink],
+    templateUrl: './videos.component.html',
+    styleUrl: './videos.component.css'
 })
 export class VideosComponent {
 

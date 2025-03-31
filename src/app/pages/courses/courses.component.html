@@ -1,6 +1,7 @@
 
 <div class="container-fluid text-center">
     <h1>Courses</h1>
+    <button type="button" class="btn btn-primary" routerLink="/course-form">Agregar curso</button>
     <div class="d-flex justify-content-center align-content-center flex-wrap gap-4">
         @for(course of courses; track $index){
             <div class="card" style="width: 18rem;" (click)="goToCourse(course.id)">
